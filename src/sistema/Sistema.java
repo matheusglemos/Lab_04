@@ -150,7 +150,7 @@ public class Sistema {
 			this.registros.add(this.alunos.get(matricula));
 			return "ALUNO REGISTRADO!\n";
 		} else {
-			return "Aluno não cadastrado.\n";
+			return "Aluno nao cadastrado.\n";
 		}
 	}
 
