@@ -47,8 +47,6 @@ public class GrupoEstudo {
 	/**
 	 * Metodo que retorna uma representacao textual do grupo(Com os dados dos
 	 * participantes).
-	 * 
-	 * @Return String
 	 */
 	@Override
 	public String toString() {
