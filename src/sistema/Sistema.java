@@ -38,12 +38,9 @@ public class Sistema {
 	/**
 	 * Metodo que cadastra um aluno.
 	 * 
-	 * @param matricula
-	 *            Matricula do aluno
-	 * @param nome
-	 *            Nome do aluno.
-	 * @param curso
-	 *            Nome do curso do aluno.
+	 * @param matricula Matricula do aluno
+	 * @param nome      Nome do aluno.
+	 * @param curso     Nome do curso do aluno.
 	 * 
 	 * @return true se conseguir cadastrar um aluno, ou false caso contrario.
 	 */
@@ -59,8 +56,7 @@ public class Sistema {
 	/**
 	 * Metodo que cadastra um grupo.
 	 * 
-	 * @param nomeGrupo
-	 *            Nome do grupo.
+	 * @param nomeGrupo Nome do grupo.
 	 * 
 	 * @return true se conseguir cadastrar um grupo, ou false caso contrario.
 	 */
@@ -76,8 +72,7 @@ public class Sistema {
 	/**
 	 * Metodo que exibe um aluno.
 	 * 
-	 * @param matricula
-	 *            Matricula do aluno.
+	 * @param matricula Matricula do aluno.
 	 * 
 	 * @return String(toString de aluno ou 'Aluno nao cadastrado");
 	 */
@@ -92,13 +87,11 @@ public class Sistema {
 	/**
 	 * Metodo que aloca um aluno em um grupo.
 	 * 
-	 * @param matricula
-	 *            Matricula do aluno.
-	 * @param nomeGrupo
-	 *            Nome do grupo.
+	 * @param matricula Matricula do aluno.
+	 * @param nomeGrupo Nome do grupo.
 	 * 
-	 * @return String(Situacoes em que o grupo ou aluno nao existe, ou se for
-	 *         bem sucedida).
+	 * @return String(Situacoes em que o grupo ou aluno nao existe, ou se for bem
+	 *         sucedida).
 	 */
 	public String alocarAluno(String matricula, String nomeGrupo) {
 		if (!existeAluno(matricula)) {
@@ -107,7 +100,7 @@ public class Sistema {
 		if (!existeGrupo(nomeGrupo)) {
 			return "Grupo nao cadastrado.\n";
 		}
-		if(this.grupos.get(nomeGrupo.toLowerCase()).adicionarAluno(this.alunos.get(matricula))) {
+		if (this.grupos.get(nomeGrupo.toLowerCase()).adicionarAluno(this.alunos.get(matricula))) {
 			return "ALUNO ALOCADO!\n";
 		} else {
 			return "ALUNO JA CADASTRADO NO GRUPO!\n";
@@ -117,8 +110,7 @@ public class Sistema {
 	/**
 	 * Metodo que imprime o grupo desejado.
 	 * 
-	 * @param nomeGrupo
-	 *            Nome do grupo.
+	 * @param nomeGrupo Nome do grupo.
 	 * 
 	 * @return String(toString do grupo desejado).
 	 */
@@ -149,8 +141,7 @@ public class Sistema {
 	/**
 	 * Metodo que registra participacoes do aluno no sistema.
 	 * 
-	 * @param matricula
-	 *            Matricula do alunos.
+	 * @param matricula Matricula do alunos.
 	 * 
 	 * @return String("ALUNO REGISTRADO!" ou "Aluno nao cadastrado").
 	 */
@@ -166,8 +157,7 @@ public class Sistema {
 	/**
 	 * Metodo privado que verifica se um grupo existe no sistema.
 	 * 
-	 * @param nomeGrupo
-	 *            Nome do grupo
+	 * @param nomeGrupo Nome do grupo
 	 * 
 	 * @return true se o grupo existir no sistema, ou false caso contrario.
 	 */
@@ -178,8 +168,7 @@ public class Sistema {
 	/**
 	 * Metodo privado que verifica se um aluno existe no sistema.
 	 * 
-	 * @param nomeGrupo
-	 *            Nome do aluno
+	 * @param nomeGrupo Nome do aluno
 	 * 
 	 * @return true se o aluno existir no sistema, ou false caso contrario.
 	 */
